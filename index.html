@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>ViewGetter Demo</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<style type="text/css">
+		body{
+			width:1200px;
+		}
+			div{
+				border:solid #000 2px;	
+				width: 350px;
+				height:200px;
+				float:left;
+			}
+
+			#bottom{
+				width:1058px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='left' vg-url='template/left.html'></div>
+		<div id='center' vg-url='template/center.html'></div>
+		<div id='right' vg-url='template/right.html'></div>
+		<div id='bottom' vg-url='template/bottom.html'></div>
+
+
+
+
+
+
+		<!-- <input id='txt' type='text' />-->
+		<script type="text/javascript" src="plugin/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="core/viewGetter.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//KOMODO.initial();
+				viewGetter.initial();
+			});
+		</script>
+	</body>
+</html>

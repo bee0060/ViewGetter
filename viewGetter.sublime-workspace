@@ -1,0 +1,1168 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"outbound_sh",
+				"outbound_shop_id"
+			],
+			[
+				"inven",
+				"inventory"
+			],
+			[
+				"data",
+				"dataType	addUser.js"
+			],
+			[
+				"exchange",
+				"exchangeNumBlurEvent(numObj)	exchange.js"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"oder",
+				"orderId"
+			],
+			[
+				"produ",
+				"productWhereArr"
+			],
+			[
+				"ec",
+				"echo"
+			],
+			[
+				"tyo",
+				"typeof(aSome)"
+			],
+			[
+				"selected",
+				"selectedProductId"
+			],
+			[
+				"SCR",
+				"script	Tag"
+			],
+			[
+				"product_type",
+				"product_type_model"
+			],
+			[
+				"product",
+				"product_pants_type_id"
+			],
+			[
+				"pan",
+				"product_pants_type_id"
+			],
+			[
+				"product_pa",
+				"product_pants_type_id"
+			],
+			[
+				"t",
+				"tbody	Tag"
+			],
+			[
+				"d",
+				"dotted"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"outer",
+				"outerHTML"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "core/viewGetter.js",
+			"settings":
+			{
+				"buffer_size": 1302,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1397,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/left.html",
+			"settings":
+			{
+				"buffer_size": 75,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/center.html",
+			"settings":
+			{
+				"buffer_size": 76,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/right.html",
+			"settings":
+			{
+				"buffer_size": 75,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/bottom.html",
+			"settings":
+			{
+				"buffer_size": 76,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++.sublime-build",
+	"command_palette":
+	{
+		"height": 35.0,
+		"selected_items":
+		[
+			[
+				"fmt",
+				"phpfmt: refactor"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"format",
+				"Format: Php"
+			],
+			[
+				"form",
+				"Format: Php"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/xampp/htdocs/KOMODO/js/script.js",
+		"/E/xampp/htdocs/KOMODO/css/main.css",
+		"/E/xampp/htdocs/KOMODO/index.html",
+		"/D/工作/翁化青/程序员/个人项目/KOMODO/js/script.js",
+		"/D/工作/翁化青/程序员/个人项目/KOMODO/index.html",
+		"/D/工作/翁化青/程序员/个人项目/KOMODO/css/main.css",
+		"/E/xampp/htdocs/cat/code/application/controllers/customer/customer.php",
+		"/E/xampp/htdocs/cat/code/application/template/customer/customer_list.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/add_inventory_order.php",
+		"/E/xampp/htdocs/cat/code/application/template/order/add_inventory_order.html",
+		"/E/xampp/htdocs/cat/code/static/js/order/add_inventory_order.js",
+		"/E/xampp/htdocs/cat/code/application/controllers/product/product.php",
+		"/C/Users/Bear&Pig/Desktop/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/index.html",
+		"/E/xampp/htdocs/cat/code/application/template/inc/header.html",
+		"/C/Users/Bear&Pig/Desktop/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.css",
+		"/C/Users/Bear&Pig/Desktop/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.min.css",
+		"/C/Users/Bear&Pig/Desktop/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css",
+		"/C/Users/Bear&Pig/Desktop/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.min.js",
+		"/C/Users/Bear&Pig/Desktop/jquery-ui-1.11.4.custom/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css",
+		"/E/xampp/htdocs/cat/code/application/controllers/inventory/inventory.php",
+		"/E/xampp/htdocs/cat/code/application/models/exchange_order_model.php",
+		"/E/xampp/htdocs/cat/code/application/models/order_model.php",
+		"/E/xampp/htdocs/cat/code/application/template/customer/customer_detail.html",
+		"/E/xampp/htdocs/cat/code/application/core/Cat_Controller.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/return_order.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/exchange_order.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/my_shop_order.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/my_return_order.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/my_exchange_order.php",
+		"/E/xampp/htdocs/cat/code/index.php",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_shop_order_list.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/return_order_list.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_return_order_list.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/exchange_order_list.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_exchange_order_list.html",
+		"/E/xampp/htdocs/cat/code/application/.htaccess",
+		"/E/xampp/htdocs/cat/code/application/template/inc/menu.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_shop_order_detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/shop_order_detail.html",
+		"/C/Users/Bear&Pig/Desktop/KOMODO.lnk",
+		"/E/xampp/htdocs/cat/code/application/template/order/shop_order_list.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/book/book_order.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/shop_order.php",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_exchange_order_detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/exchange_order_detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_shop_order_outbound.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/add_exchange_order.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_exchange_order_exchange.html",
+		"/E/xampp/htdocs/cat/code/application/template/inventory/list_shop.html",
+		"/E/xampp/htdocs/cat/code/application/template/inventory/list.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/add_return_order.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/my_return_order_detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/return_order_detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/order/add_shop_order.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/add_shop_order.php",
+		"/E/xampp/htdocs/cat/code/static/js/order/order_product_common.js",
+		"/E/xampp/htdocs/cat/code/static/js/exchange_order/exchange_order_detail.js",
+		"/E/xampp/htdocs/cat/code/static/js/exchange_order/exchange.js",
+		"/E/xampp/htdocs/cat/code/static/js/order/shop_order_detail.js",
+		"/E/xampp/htdocs/cat/code/static/js/return_order/return_order_detail.js",
+		"/E/xampp/htdocs/cat/code/static/js/book/book_order_detail.js",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/add_return_order.php",
+		"/E/xampp/htdocs/cat/code/application/template/book/book_order_detail.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/order/add_exchange_order.php",
+		"/E/xampp/htdocs/cat/code/application/template/shop/detail.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/shop/shop.php",
+		"/E/xampp/htdocs/cat/code/system/core/Common.php",
+		"/E/xampp/htdocs/cat/code/application/template/login.html",
+		"/D/工作/翁化青/程序员/个人项目/Puzzle/js/puzzle.js",
+		"/D/工作/翁化青/程序员/个人项目/Puzzle/css/puzzle.css",
+		"/E/xampp/htdocs/cat/code/application/template/sys/user/addUser.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/sys/user.php",
+		"/E/xampp/htdocs/cat/code/static/js/sys/addUser.js",
+		"/C/Users/Bear&Pig/Desktop/bookmarks_15_3_17.html",
+		"/E/xampp/htdocs/cat/code/application/template/inventory/detail.html",
+		"/E/xampp/htdocs/cat/code/static/js/toolkit/formValidation.js",
+		"/E/xampp/htdocs/cat/code/static/js/basic.js",
+		"/E/xampp/htdocs/cat/code/application/models/book_order_model.php",
+		"/E/xampp/htdocs/cat/code/application/template/book/book_order.html",
+		"/E/xampp/htdocs/cat/code/application/core/Cat_Model.php",
+		"/E/xampp/htdocs/cat/code/database/20150125/05_Steven.sql",
+		"/E/xampp/htdocs/cat/code/application/models/order_product_model.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/select_pages/select_customer.php",
+		"/E/xampp/htdocs/cat/code/static/js/select_pages/select_customer.js",
+		"/E/xampp/htdocs/cat/code/application/libraries/PHPExcel/Shared/JAMA/utils/Error.php.dump",
+		"/E/xampp/htdocs/cat/code/static/js/select_pages/select_product.js",
+		"/E/xampp/htdocs/cat/code/application/controllers/select_pages/select_product.php",
+		"/E/xampp/htdocs/cat/code/application/template/select_pages/select_customer.html",
+		"/E/xampp/htdocs/cat/code/application/template/select_pages/select_product.html",
+		"/E/xampp/htdocs/cat/code/application/models/book_order_product_model.php",
+		"/E/xampp/htdocs/cat/code/application/models/exchange_order_product_model.php",
+		"/E/xampp/htdocs/cat/code/database/20150121steven/update_module.sql",
+		"/E/xampp/htdocs/cat/code/application/template/product/product_list.html",
+		"/E/xampp/htdocs/cat/code/application/template/product/product_detail.html",
+		"/E/xampp/htdocs/cat/code/static/js/product/product.js",
+		"/E/xampp/htdocs/cat/code/application/template/inc/footer.html",
+		"/E/xampp/htdocs/cat/code/application/config/pagination.php",
+		"/E/xampp/htdocs/cat/code/application/controllers/customer/customer_sel.php",
+		"/E/xampp/htdocs/cat/code/application/template/select_pages/select_customer",
+		"/c/users/bear&pig/appdata/local/temp/sublime-svn-1420717335/SVN",
+		"/E/xampp/htdocs/cat/code/application/controllers/book/product_set.php",
+		"/E/xampp/htdocs/cat/code/application/template/book/book_product_list.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/book/book_product_list.php",
+		"/E/xampp/htdocs/cat/code/application/template/book/book_product_setting.html",
+		"/E/xampp/htdocs/cat/code/application/models/v_book_order_model.php",
+		"/E/xampp/htdocs/cat/code/application/config/database.php",
+		"/E/xampp/mysql/bin/my.ini",
+		"/E/xampp/htdocs/cat/code/application/template/inc/copyright.html.dump",
+		"/E/xampp/htdocs/cat/code/application/controllers/product/product_pants_type.php",
+		"/E/xampp/htdocs/cat/code/application/template/product/product_pants_type_detail.html",
+		"/E/xampp/htdocs/cat/code/application/config/config.php",
+		"/E/xampp/htdocs/cat/code/application/template/customer/customer_type_detail.html",
+		"/E/xampp/htdocs/cat/code/application/controllers/customer/customer_type.php",
+		"/E/xampp/htdocs/cat/code/database/rex20141219/v_product.sql",
+		"/E/xampp/htdocs/cat/code/application/models/v_product_model.php",
+		"/E/xampp/htdocs/cat/code/application/template/sys/module/detail.html",
+		"/E/xampp/htdocs/cat/code/application/libraries/Account.php",
+		"/E/xampp/htdocs/cat/code/application/template/customer/customer_type_list.html",
+		"/E/xampp/htdocs/cat/code/application/template/product/detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/product/product_type_detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/sys/role/detail.html",
+		"/E/xampp/htdocs/cat/code/application/template/user/pwd.html",
+		"/E/xampp/htdocs/cat/code/application/models/customer_model.php",
+		"/E/xampp/htdocs/cat/code/application/models/customer_type_model.php",
+		"/E/xampp/phpMyAdmin/config.inc.php",
+		"/D/工作/翁化青/程序员/个人项目/谢翔-CRM+进销存系统/cat/src/pages/list.html",
+		"/D/工作/翁化青/程序员/个人项目/谢翔-CRM+进销存系统/cat/src/pages/detail.html",
+		"/E/xampp/htdocs/index2.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"E:\\xampp\\htdocs\\cat\\code\\application\\controllers",
+			"E:\\xampp\\htdocs\\cat\\code",
+			"",
+			"E:\\xampp\\htdocs\\cat\\",
+			"E:\\xampp\\htdocs\\cat\\code",
+			"E:\\xampp\\htdocs\\cat\\code\\application",
+			"E:\\xampp\\htdocs\\cat\\code",
+			"E:\\xampp\\htdocs\\cat\\code\\application",
+			"E:\\xampp\\htdocs\\cat\\code",
+			"E:\\xampp\\htdocs\\cat\\code\\application",
+			"E:\\xampp\\htdocs\\cat\\code"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"overflow",
+			"newsArr",
+			"alert",
+			"$this->product_model->",
+			"host",
+			"get(",
+			"images",
+			"show_error\\((.*)\\);",
+			"show_error",
+			"add_return",
+			"product",
+			"show_error",
+			"showerror",
+			"nex",
+			"ffff",
+			"ffffff",
+			"select",
+			"ffffff",
+			"<!DOCTYPE html>\n<html lang=\"en\">\n	<head>\n		<meta charset=\"utf-8\" />\n		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame\n		Remove this if you use the .htaccess -->\n		<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n		<title>home</title>\n		<meta name=\"description\" content=\"\" />\n		<meta name=\"author\" content=\"Administrator\" />\n		<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0\" />\n		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->\n		<link rel=\"shortcut icon\" href=\"/favicon.ico\" />\n		<link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n		<link rel=\"stylesheet\" href=\"css/main.css\" />\n	</head>\n	<body>\n		<div class=\"head\">\n			<div class=\"headTop\">\n				<div class=\"logo\">\n					KOMODO\n				</div>\n				<div class=\"nav\">\n					<ul>\n						<li>\n							<a class='currentPage' href=\"#\">Home</a>\n						</li>\n						<li>\n							<a href=\"#\">About</a>\n						</li>\n						<li>\n							<a href=\"#\">Contact</a>\n						</li>\n						<li>\n							<a href=\"#\">Newsletter</a>\n						</li>\n					</ul>\n				</div>\n			</div>\n			<div class='headContentContainer'>\n				<div>\n					<div class=\"headMiddle\">\n						<div class=\"left\">\n							<!--	<div><input id='hdnCurrentNews' type='hidden' value='' /></div> -->\n							<div class=\"newsHead\"></div>\n							<div class=\"newsContainer\"></div>\n						</div>\n						<div class=\"center\"></div>\n					</div>\n					<div class=\"headBottom\">\n						<div class='left'>\n							Sort Work By/\n							<ul>\n								<li class='current'>\n									Fashion\n								</li>\n								<li>\n									Others\n								</li>\n							</ul>\n						</div>\n						<div class=\"right\">\n							<span>Weibo</span>\n						</div>\n					</div>\n				</div>\n				<div>\n					<div class='headMiddle'>\n						<p>About</p>						\n		 <div id='map_canvas' style='width:800px;height:100%;'></div>\n					</div>\n					<div class=\"headBottom\"></div>\n				</div>\n				<div>\n					Contanct\n				</div>\n				<div>\n					Newsletter\n				</div>\n			</div>\n		</div>\n		<div class='mainContent'>\n			<!--<div class='imageContainer'>\n			<div class='smallImage'>\n			<div class='mask'></div>\n			<div><img alt=\"\" src=\"images/x1.jpg\">\n			</div>\n			</div>\n			<div  class=\"contentContainer\">\n			<div class='left'>\n			<p class='pictureClient'>\n			Client-----\n			</p>\n			<h1 class='pictureClientName'>Google</h3>\n			</div>\n			<div class=\"center\">\n			<div>\n			<div class=\"pictureTitle\">\n			1 Google Earth. 1 Billion Downloads.\n			</div>\n			<div class=\"pictureContent\">\n			1 Google Earth. 1 Billion Downloads.1 Google Earth. 1 Billion Downloads.\n			</div>\n			</div>\n			</div>\n			</div>\n			<div class=\"contentBottom\">\n			<div class=\"right\">\n			<span>Back to top</span>\n			</div>\n			</div>\n			<div class='imageContainer'>\n			<div class='smallImage'>\n			<div class='mask'></div>\n			<div><img alt=\"\" src=\"images/x2.jpg\">\n			</div>\n			</div>\n			</div>-->\n		</div>\n		<!-- <input id='txt' type='text' />-->\n		<script type=\"text/javascript\" src=\"js/jquery-1.7.1.min.js\"></script>\n		<script type=\"text/javascript\" src=\"js/script.js\"></script>\n		<script type=\"text/javascript\">\n			$(document).ready(function() {\n				KOMODO.initial();\n			});\n		</script>\n	</body>\n</html>\n",
+			"exchange",
+			"del(",
+			"checkUserHasOptPermission",
+			"'uid' => $this->_user['uid']",
+			"'uid' => $this->_user['uid'],",
+			"'id'",
+			"\"id\"",
+			"=>",
+			"'express_num' => $data['express_num'],",
+			"=>",
+			"['",
+			"']",
+			"['",
+			"']",
+			"['",
+			"implode",
+			"= $where.",
+			"_user['",
+			"_user['shop_id']",
+			"hasPermission",
+			"getOrderTypeName",
+			"showin",
+			"showInventory",
+			"请选择下单",
+			"order_product_common.js",
+			"您没有该操作的权限",
+			"您没有该操作权限",
+			"您没有操作权限",
+			"product_pants_type",
+			"exit",
+			"exchange",
+			"该产品编号",
+			"required",
+			"login-logo.jpg",
+			"req",
+			"else",
+			"user_shop",
+			"23db",
+			"one",
+			"response",
+			"入货",
+			"getPlayField",
+			"cat",
+			"outbound_shop_id",
+			"$type = ",
+			"type",
+			"product_size[]",
+			"checkNumCount",
+			"prderId",
+			"show_error",
+			"selectProducts",
+			"order/order_product_common.js",
+			"AN ITEM",
+			"Please select",
+			"please select",
+			"please select the item in the list",
+			"update",
+			"data['outbound_num'][$key]",
+			"order_product_model",
+			"alert(",
+			"order_id",
+			"order_product_model",
+			"order_product",
+			"$orderInfo",
+			"$order_id",
+			"book_order_product_model",
+			"mainWin.",
+			"$order_id",
+			"class=\"control-label\"",
+			"<label ",
+			"label>",
+			"<!--{base_url()}-->inventory/inventory/save/<!--{$result['shop_id']}-->/<!--{$result['product_id']}-->",
+			"add_shop_order.html",
+			"product_id",
+			"selectProduct",
+			"<!--\\{\\$value\\['([^']+)'\\]\\}-->",
+			"<!--\\{\\$value\\['[^']+'\\]\\}-->",
+			"customer",
+			"Customer",
+			"productTypeChangeEvent('<!--{base_url()}-->',",
+			"create_links",
+			"per_page",
+			"select_customer",
+			"numrow",
+			"customer_model",
+			"cat",
+			"rex",
+			"customer",
+			"v_pro",
+			"->post(",
+			"POST",
+			"'",
+			"$config['page_query_string'] = TRUE; ",
+			"page_query_string",
+			"display",
+			"product_size_id",
+			"product_style_id",
+			"product_type_id",
+			"customer_type_id",
+			"customer",
+			"(.*)",
+			" ",
+			",",
+			"FROM.*",
+			"SELECT ",
+			"`",
+			"v_product_size",
+			"p.",
+			"pr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"echo $1;",
+			"cccccc",
+			"=> empty($data['customer_name']) ? '' : ",
+			"->",
+			"",
+			"->",
+			"",
+			"->",
+			".=",
+			"required=\"required\"",
+			"buildPlayField",
+			"book_order_id",
+			"book_order_product_model",
+			"book_order_product",
+			"$bookOrderInfo",
+			"$book_order_id",
+			"",
+			"<span ",
+			"<span",
+			"span>",
+			"{$1}",
+			"Product",
+			"productTypeChangeEvent(",
+			"book_order_model",
+			"book_order",
+			"`",
+			"product_pants_type_id",
+			"product_color_id",
+			"product_size_id",
+			"product_style_id",
+			"product_type_id",
+			"product",
+			"<label class=\"control-label\">ColumnNam</label>\n      <input type=\"text\" name=\"$1\" id=\"$1\" required value=\"<!--{isset($result) ? $result['$1'] : ''}-->\" >",
+			"",
+			"\\n",
+			"",
+			"v_product",
+			"cat.product.",
+			"cat.product_style.",
+			"cat.product_type.",
+			"cat.product.",
+			"p.",
+			"",
+			",\\n",
+			"",
+			"product",
+			"Product",
+			"customer_type_id",
+			"<label class=\"control-label\">ColumnNam</label>\n      <input type=\"text\" name=\"$1\" id=\"$1\" required value=\"<!--{isset($result) ? $result['$1'] : ''}-->\" >",
+			"\\n",
+			"",
+			"$1($|\\\\/)/'",
+			"$1($|\\\\/)'",
+			"$1($|\\\\/)",
+			"$1($|\\/)",
+			"$1",
+			"",
+			"customer/customer/",
+			"customer/customer_type/",
+			"customer/customer_type",
+			"customer/",
+			"type",
+			"customer_type",
+			"Customer_type",
+			"customer_type",
+			"customer",
+			"Customer",
+			"customer",
+			"Customer",
+			"label",
+			"\"../$1",
+			"",
+			"\"../$1",
+			"Data",
+			"",
+			"\\n",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "core/viewGetter.js",
+					"settings":
+					{
+						"buffer_size": 1302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1098,
+								1098
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "template/left.html",
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								59
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "template/center.html",
+					"settings":
+					{
+						"buffer_size": 76,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "template/right.html",
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "template/bottom.html",
+					"settings":
+					{
+						"buffer_size": 76,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 124.0
+	},
+	"replace":
+	{
+		"height": 184.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"add_inventory_order",
+				"code/static/js/order/add_inventory_order.js"
+			],
+			[
+				"add_inven",
+				"code/application/controllers/order/add_inventory_order.php"
+			],
+			[
+				"inventory",
+				"code/application/controllers/inventory/inventory.php"
+			],
+			[
+				"my_return",
+				"code/application/template/order/my_return_order_list.html"
+			],
+			[
+				"return_order",
+				"code/application/template/order/return_order_list.html"
+			],
+			[
+				"my_shop_",
+				"code/application/template/order/my_shop_order_list.html"
+			],
+			[
+				"my_exchange",
+				"code/application/template/order/my_exchange_order_list.html"
+			],
+			[
+				"exchange_order",
+				"code/application/template/order/exchange_order_list.html"
+			],
+			[
+				"customer_de",
+				"code/application/template/customer/customer_detail.html"
+			],
+			[
+				"customer",
+				"code/application/template/customer/customer_list.html"
+			],
+			[
+				"custo",
+				"code/application/controllers/customer/customer.php"
+			],
+			[
+				"",
+				"code/application/.htaccess"
+			],
+			[
+				"my_shop_order",
+				"code/application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"shop_o",
+				"code/application/template/order/shop_order_detail.html"
+			],
+			[
+				"shop",
+				"code/application/template/order/shop_order_list.html"
+			],
+			[
+				"my_shop",
+				"code/application/template/order/my_shop_order_list.html"
+			],
+			[
+				"return",
+				"code/application/controllers/order/return_order.php"
+			],
+			[
+				"return_o",
+				"code/application/controllers/order/return_order.php"
+			],
+			[
+				"exchange",
+				"code/application/template/order/exchange_order_detail.html"
+			],
+			[
+				"my_s",
+				"code/application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"my_exch",
+				"code/application/template/order/my_exchange_order_detail.html"
+			],
+			[
+				"order_",
+				"code/application/models/order_model.php"
+			],
+			[
+				"my_exchan",
+				"code/application/controllers/order/my_exchange_order.php"
+			],
+			[
+				"my_return_",
+				"code/application/template/order/my_return_order_list.html"
+			],
+			[
+				"shop_order_list",
+				"code/application/template/order/shop_order_list.html"
+			],
+			[
+				"order_model",
+				"code/application/models/order_model.php"
+			],
+			[
+				"my_shop_or",
+				"code/application/controllers/order/my_shop_order.php"
+			],
+			[
+				"outbound",
+				"code/application/template/order/my_shop_order_outbound.html"
+			],
+			[
+				"my_exchange_order_exchange",
+				"code/application/template/order/my_exchange_order_exchange.html"
+			],
+			[
+				"my_sh",
+				"code/application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"shop_order_li",
+				"code/application/template/order/shop_order_list.html"
+			],
+			[
+				"my",
+				"code/application/controllers/order/my_shop_order.php"
+			],
+			[
+				"order.php",
+				"code/application/controllers/order/shop_order.php"
+			],
+			[
+				"list_shop",
+				"code/application/template/inventory/list_shop.html"
+			],
+			[
+				"inven",
+				"code/application/controllers/inventory/inventory.php"
+			],
+			[
+				"list",
+				"code/application/template/inventory/list.html"
+			],
+			[
+				"my_excha",
+				"code/application/template/order/my_exchange_order_detail.html"
+			],
+			[
+				"add_exc",
+				"code/application/template/order/add_exchange_order.html"
+			],
+			[
+				"exchange_",
+				"code/application/template/order/exchange_order_detail.html"
+			],
+			[
+				"add_return",
+				"code/application/template/order/add_return_order.html"
+			],
+			[
+				"return_order_de",
+				"code/application/template/order/my_return_order_detail.html"
+			],
+			[
+				"return_order.php",
+				"code/application/controllers/order/return_order.php"
+			],
+			[
+				"return_",
+				"code/application/template/order/return_order_detail.html"
+			],
+			[
+				"exchange_order.php",
+				"code/application/controllers/order/exchange_order.php"
+			],
+			[
+				"exchange.js",
+				"code/static/js/exchange_order/exchange.js"
+			],
+			[
+				"my_exchang",
+				"code/application/template/order/my_exchange_order_detail.html"
+			],
+			[
+				"exchange_order_de",
+				"code/application/template/order/exchange_order_detail.html"
+			],
+			[
+				"add_exchange",
+				"code/application/template/order/add_exchange_order.html"
+			],
+			[
+				"order_co",
+				"code/static/js/order/order_product_common.js"
+			],
+			[
+				"my_shop_order_de",
+				"code/application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"shop_order_de",
+				"code/application/template/order/shop_order_detail.html"
+			],
+			[
+				"exchange_order_d",
+				"code/application/template/order/exchange_order_detail.html"
+			],
+			[
+				"add_exchan",
+				"code/application/template/order/add_exchange_order.html"
+			],
+			[
+				"book_order_detail",
+				"code/application/template/book/book_order_detail.html"
+			],
+			[
+				"book_order",
+				"code/application/controllers/book/book_order.php"
+			],
+			[
+				"add_inve",
+				"code/application/controllers/order/add_inventory_order.php"
+			],
+			[
+				"shop_order",
+				"code/application/controllers/order/shop_order.php"
+			],
+			[
+				"add_ord",
+				"code/application/controllers/order/add_shop_order.php"
+			],
+			[
+				"order_pro",
+				"code/static/js/order/order_product_common.js"
+			],
+			[
+				"add_shop",
+				"code/application/template/order/add_shop_order.html"
+			],
+			[
+				"my_ec",
+				"code/application/template/order/my_exchange_order_detail.html"
+			],
+			[
+				"add_ex",
+				"code/application/template/order/add_exchange_order.html"
+			],
+			[
+				"common.php",
+				"code/system/core/Common.php"
+			],
+			[
+				"detail.html",
+				"code/application/template/shop/detail.html"
+			],
+			[
+				"shop.p",
+				"code/application/controllers/shop/shop.php"
+			],
+			[
+				"add_inv",
+				"code/application/controllers/order/add_inventory_order.php"
+			],
+			[
+				"adduser",
+				"code/static/js/sys/addUser.js"
+			],
+			[
+				"user",
+				"code/application/controllers/sys/user.php"
+			],
+			[
+				"menu",
+				"code/application/template/inc/menu.html"
+			],
+			[
+				"my_shop_order_outbound",
+				"application/template/order/my_shop_order_outbound.html"
+			],
+			[
+				"order_product",
+				"static/js/order/order_product_common.js"
+			],
+			[
+				"my_shop_o",
+				"application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"customer_list",
+				"application/template/customer/customer_list.html"
+			],
+			[
+				"order_deta",
+				"application/template/order/exchange_order_detail.html"
+			],
+			[
+				"order.",
+				"application/controllers/order/shop_order.php"
+			],
+			[
+				"to_outb",
+				"application/template/order/my_shop_order_outbound.html"
+			],
+			[
+				"my_exchange_order",
+				"application/controllers/order/my_exchange_order.php"
+			],
+			[
+				"order_list",
+				"application/template/order/shop_order_list.html"
+			],
+			[
+				"my_ex",
+				"application/controllers/order/my_exchange_order.php"
+			],
+			[
+				"exhange_",
+				"application/controllers/order/exchange_order.php"
+			],
+			[
+				"add_exchange_order",
+				"application/template/order/add_exchange_order.html"
+			],
+			[
+				"exchange_order_l",
+				"application/template/order/exchange_order_list.html"
+			],
+			[
+				"order_de",
+				"application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"ordder_detail",
+				"application/template/order/my_shop_order_detail.html"
+			],
+			[
+				"order_dea",
+				"application/template/order/exchange_order_detail.html"
+			],
+			[
+				"order_product_common",
+				"static/js/order/order_product_common.js"
+			],
+			[
+				"order_mo",
+				"application/models/order_model.php"
+			],
+			[
+				"order_product_model",
+				"application/models/order_product_model.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"cat",
+				"/E/xampp/htdocs/cat/cat.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true
+}
