@@ -28,7 +28,10 @@
 		</style>
 	</head>
 	<body>
-		<div id='left' vg-url='template/left.html'></div>
+		<div id='left' 
+			vg-url='template/left.html'
+			vg-selector='p'
+		></div>
 		<div id='center' vg-url='template/center.html'></div>
 		<div id='right' vg-url='template/right.html'></div>
 		<div id='bottom' vg-url='template/bottom.html'></div>
@@ -43,7 +46,6 @@
 		<script type="text/javascript" src="core/viewGetter.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				//KOMODO.initial();
 				viewGetter.initial();
 			});
 		</script>
