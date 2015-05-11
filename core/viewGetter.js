@@ -16,29 +16,20 @@
 
 	使用说明：
 	vg-url=''  ： 值为请求路径
-	vg-param-{paramName}={paramValue}  :  paramName为请求参数名， paramValue为参数值， 示例：
+	vg-p-{paramName}={paramValue}  :  paramName为请求参数名， paramValue为参数值， 示例：
 		<div vg-param-name='Peter'></div>
 		则这个div有参数name，值为Peter。
 
-	Question List:
-	1.template文件中，不允许存在style，script标签。
-	2.无法跨域
-
-
-	todo list:
-	-- 20150416
-	1. 标签增加selector属性
-	2. 标签增加params属性
-	3. 初始化时可传入config， 设置url的简称、默认参数、 和留下余地给将来更多的加载配置
+	不支持功能列表:
+	1.无法跨域
 
 */
 var viewGetter = {};
 
-// 配置信息
+// 配置信息   暂时无用。
 viewGetter.config = {
 	domain: "", // 域路径
 	returnType: "" // 返回方式
-
 };
 
 // 拆分方法， 1： 获取请求描述集合； 2： 根据请求描述进行请求，并获取返回内容； 3： 根据返回方式，利用返回内容进行后续操作。
@@ -51,14 +42,28 @@ viewGetter.requestDesc = [{
 	 * 弱没有请求参数，则序列化params为空字符串。
 	 */
 
-	url: '', // 请求路径
-	params: {}, // 请求参数
+	url: '', 							// 请求路径
+	params: {}, 						// 请求参数
 
-	responseContext: '', // 响应内容
+	responseContext: '', 				// 响应内容
 
-	containers: [], // 使用该请求的容器集合
-	callback: null // 回调函数
+	containers: [], 					// 使用该请求的容器集合
+	content: null 						// 请求描述对应的响应内容， 请求一次后便缓存起来
 }];
+
+
+// 初始化页面， 加载模板内容
+viewGetter.initial = function() {
+	viewGetter.requestDesc = [];
+
+	var objs = $('[vg-url]'),
+		arrDesc = viewGetter.requestDesc;
+
+	viewGetter.appendRequestDesc(objs);
+	viewGetter.sendRequestAndFillContainer();
+}
+
+
 
 /* 获取请求信息
  * {params} requestObjs： 需要发送请求的对象集合，即包含vg-url属性的对象
@@ -80,31 +85,13 @@ viewGetter.appendRequestDesc = function(requestObjs) {
 					url: url,
 					params: params,
 					responseContext: '',
-					containers: []
+					containers: [],
+					content: null
 				};
 		}
 		viewGetter.appendContainerIntoRequestDesc(desc, this);
 		arrDesc.push(desc);
 	});
-}
-viewGetter.getRequestDescByKey = function(key){
-	var arrDesc = viewGetter.requestDesc;
-	for(var i = 0, len = arrDesc.length; i < len; i++){
-		if(arrDesc[i]['key'] == key){
-			return arrDesc[i];
-		}
-	}
-	return null;
-}
-
-viewGetter.appendContainerIntoRequestDesc = function(desc, container){
-	if(!desc){
-		return false;
-	}
-
-	desc.containers = desc.containers || [];
-	desc.containers.push(container);
-	return true;
 }
 
 /* 获取请求对象的请求参数
@@ -133,38 +120,66 @@ viewGetter.getDescKey = function (url, params) {
 	return "{" + (url || "") + "}++{" + (params ? JSON.stringify(params) : "") +"}";
 }
 
-// 初始化页面， 加载模板内容
-viewGetter.initial = function() {
-	viewGetter.requestDesc = [];
+// 通过key获取请求描述
+viewGetter.getRequestDescByKey = function(key){
+	var arrDesc = viewGetter.requestDesc;
+	for(var i = 0, len = arrDesc.length; i < len; i++){
+		if(arrDesc[i]['key'] == key){
+			return arrDesc[i];
+		}
+	}
+	return null;
+}
 
-	var objs = $('[vg-url]'),
-		arrDesc = viewGetter.requestDesc;
+/* 将容器添加进请求描述中
+*/
+viewGetter.appendContainerIntoRequestDesc = function(desc, container){
+	if(!desc){
+		return false;
+	}
 
-	viewGetter.appendRequestDesc(objs);
+	desc.containers = desc.containers || [];
+	desc.containers.push(container);
+	return true;
+}
 
-	// send requests
+/* 	发送请求，并用响应结果填充请求描述对应的容器	
+	若请求描述中已缓存响应内容，则直接填充
+ */
+viewGetter.sendRequestAndFillContainer = function () {
+	var arrDesc = viewGetter.requestDesc;
+
 	for (var i = 0, len = arrDesc.length; i < len; i++) {
-		var currentUrl = arrDesc[i].url; // 相对路径
-		var currentParams = arrDesc[i].params || {}; // 请求参数 
-		var containers = arrDesc[i].containers; // 容器
+		var currentUrl = arrDesc[i].url; 				// 相对路径
+		var currentParams = arrDesc[i].params || {}; 	// 请求参数 
+		var containers = arrDesc[i].containers; 		// 容器
+		var currentContent = arrDesc[i].content;
 
-		currentParams["temp"] = Math.random();
+		if(!responseContext){
+			currentParams["temp"] = Math.random();
 
-		$.ajax({
-			"url": currentUrl,
-			"data": currentParams,
-			"success": (function(objs) {
-				return function(data) {
-					var responseText = data.replace(/[\n\t\r]/g, '');
-					var responseContext = viewGetter.getResponseContext(responseText);
-					$(objs).each(function() {
-						$(this).html(responseContext);
-					});
-				}
-			})(containers),
-			"dataType": "html",
-			"type": 'POST'
-		});
+			$.ajax({
+				"url": currentUrl,
+				"data": currentParams,
+				"success": (function(objs) {
+					return function(data) {
+						var responseText = data.replace(/[\n\t\r]/g, '');
+						var responseContext = viewGetter.getResponseContext(responseText);
+						$(objs).each(function() {
+							$(this).html(responseContext);
+						});
+						arrDesc[i].content = responseContext;
+					}
+				})(containers),
+				"dataType": "html",
+				"type": 'POST'
+			});
+		}
+		else{
+			$(containers).each(function() {
+				$(this).html(currentContent);
+			});
+		}
 	}
 }
 
