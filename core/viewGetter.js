@@ -63,7 +63,7 @@ viewGetter.requestDesc = [{
 /* 获取请求信息
  * {params} requestObjs： 需要发送请求的对象集合，即包含vg-url属性的对象
  */
-viewGetter.getRequestDesc = function(requestObjs) {
+viewGetter.appendRequestDesc = function(requestObjs) {
 	var arrDesc = viewGetter.requestDesc;
 
 	// Get url array
@@ -73,21 +73,38 @@ viewGetter.getRequestDesc = function(requestObjs) {
 			params = viewGetter.getRequestParams(me),
 			key = viewGetter.getDescKey(url, params);
 
-		// TODO 需要改成对desc的key进行重复判断,重复的话，添加到desc的containers数组，不重复的话，新增desc并插入desc数组。
-		if (isRequestDescExist(key)) {
-
+		var desc = viewGetter.getRequestDescByKey(key);
+		if(!desc){
+			desc = {
+					key: key,
+					url: url,
+					params: params,
+					responseContext: '',
+					containers: []
+				};
 		}
-		else{
-			arrDesc.push({
-				key: key,
-				url: url,
-				params: params,
-				responseContext: '',
-				containers: [ this ]
-			});
-		}
+		viewGetter.appendContainerIntoRequestDesc(desc, this);
+		arrDesc.push(desc);
 	});
-	return false;
+}
+viewGetter.getRequestDescByKey = function(key){
+	var arrDesc = viewGetter.requestDesc;
+	for(var i = 0, len = arrDesc.length; i < len; i++){
+		if(arrDesc[i]['key'] == key){
+			return arrDesc[i];
+		}
+	}
+	return null;
+}
+
+viewGetter.appendContainerIntoRequestDesc = function(desc, container){
+	if(!desc){
+		return false;
+	}
+
+	desc.containers = desc.containers || [];
+	desc.containers.push(container);
+	return true;
 }
 
 /* 获取请求对象的请求参数
@@ -111,59 +128,40 @@ viewGetter.getRequestParams = function(requestObj) {
 	return params;
 }
 
-/* 判断请求描述是否已存在
- * {params} key[string] : url+params序列化拼接成的key，可代表唯一的请求描述
- */
-viewGetter.isRequestDescExist = function (key) {
-	var arrDesc = viewGetter.requestDesc;
-	for(var i = 0, len = arrDesc.length; i < len; i++){
-		if(arrDesc[i]['key'] == key){
-			return true;
-		}
-	}
-	return false;
-}
-
 // 获取请求描述的key
 viewGetter.getDescKey = function (url, params) {
-	return "{" + (url ?? "") + "}++{" + params ?? JSON.stringify(params) : "" +"}";;	
+	return "{" + (url || "") + "}++{" + (params ? JSON.stringify(params) : "") +"}";
 }
 
 // 初始化页面， 加载模板内容
 viewGetter.initial = function() {
+	viewGetter.requestDesc = [];
+
 	var objs = $('[vg-url]'),
-		arrUrl = [];
+		arrDesc = viewGetter.requestDesc;
 
-	// Get url array
-	objs.each(function(i) {
-		var me = $(this);
-		url = me.attr('vg-url');
-
-		if ($.inArray(url, arrUrl) < 0) {
-			arrUrl.push(url);
-		}
-	});
+	viewGetter.appendRequestDesc(objs);
 
 	// send requests
-	for (var i = 0, len = arrUrl.length; i < len; i++) {
-		var currentUrl = arrUrl[i]; // 相对路径
-		var mappingObjs = objs.filter('[vg-url="' + currentUrl + '"]');
+	for (var i = 0, len = arrDesc.length; i < len; i++) {
+		var currentUrl = arrDesc[i].url; // 相对路径
+		var currentParams = arrDesc[i].params || {}; // 请求参数 
+		var containers = arrDesc[i].containers; // 容器
+
+		currentParams["temp"] = Math.random();
 
 		$.ajax({
 			"url": currentUrl,
-			"data": {
-				temp: Math.random()
-			},
+			"data": currentParams,
 			"success": (function(objs) {
 				return function(data) {
 					var responseText = data.replace(/[\n\t\r]/g, '');
 					var responseContext = viewGetter.getResponseContext(responseText);
-
-					objs.each(function() {
-						$(this).append(responseContext);
+					$(objs).each(function() {
+						$(this).html(responseContext);
 					});
 				}
-			})(mappingObjs),
+			})(containers),
 			"dataType": "html",
 			"type": 'POST'
 		});
@@ -203,3 +201,4 @@ viewGetter.createHtmlObj = function(outerHtml) {
 		return null;
 	}
 }
+ 
