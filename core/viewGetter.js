@@ -155,7 +155,7 @@ viewGetter.sendRequestAndFillContainer = function () {
 		var containers = arrDesc[i].containers; 		// 容器
 		var currentContent = arrDesc[i].content;
 
-		if(!responseContext){
+		if(typeof responseContext === 'undefined'){
 			currentParams["temp"] = Math.random();
 
 			$.ajax({
