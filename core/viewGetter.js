@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 	copyright: Steven Weng
 	created on: 2015/04/16
@@ -42,14 +44,22 @@ viewGetter.requestDesc = [{
 	 * 弱没有请求参数，则序列化params为空字符串。
 	 */
 
-	url: '', 							// 请求路径
-	params: {}, 						// 请求参数
+	url: '', // 请求路径
+	params: {}, // 请求参数
 
-	responseContext: '', 				// 响应内容
+	responseContext: '', // 响应内容
 
-	containers: [], 					// 使用该请求的容器集合
-	content: null 						// 请求描述对应的响应内容， 请求一次后便缓存起来
+	containers: [], // 使用该请求的容器集合
+	styles: [],
+	scripts: [],
+	content: null // 请求描述对应的响应内容， 请求一次后便缓存起来
 }];
+
+// 样式集合
+viewGetter.styles = [];
+
+// 脚本集合
+viewGetter.scripts = [];
 
 
 // 初始化页面， 加载模板内容
@@ -61,7 +71,7 @@ viewGetter.initial = function() {
 
 	viewGetter.appendRequestDesc(objs);
 	viewGetter.sendRequestAndFillContainer();
-}
+};
 
 
 
@@ -79,20 +89,20 @@ viewGetter.appendRequestDesc = function(requestObjs) {
 			key = viewGetter.getDescKey(url, params);
 
 		var desc = viewGetter.getRequestDescByKey(key);
-		if(!desc){
+		if (!desc) {
 			desc = {
-					key: key,
-					url: url,
-					params: params,
-					responseContext: '',
-					containers: [],
-					content: null
-				};
+				key: key,
+				url: url,
+				params: params,
+				responseContext: '',
+				containers: [],
+				content: null
+			};
 		}
 		viewGetter.appendContainerIntoRequestDesc(desc, this);
 		arrDesc.push(desc);
 	});
-}
+};
 
 /* 获取请求对象的请求参数
  * {params} requestObj: 请问对象
@@ -102,101 +112,93 @@ viewGetter.getRequestParams = function(requestObj) {
 		return null;
 	}
 	var params = {};
-	for (var i = 0, attrs = requestObj.attributes, len = attrs.length; 
-		i < len; i++) {
+	for (var i = 0, attrs = requestObj.attributes, len = attrs.length; i < len; i++) {
 		var attr = attrs[i],
 			attrName = '';
 
-		if(attr.nodeName.indexOf('vg-p-')==0){
+		if (attr.nodeName.indexOf('vg-p-') == 0) {
 			attrName = attr.nodeName.substr(5);
 			params[attrName] = attr.nodeValue;
 		}
 	}
 	return params;
-}
+};
 
 // 获取请求描述的key
-viewGetter.getDescKey = function (url, params) {
-	return "{" + (url || "") + "}++{" + (params ? JSON.stringify(params) : "") +"}";
-}
+viewGetter.getDescKey = function(url, params) {
+	return "{" + (url || "") + "}++{" + (params ? JSON.stringify(params) : "") + "}";
+};
 
 // 通过key获取请求描述
-viewGetter.getRequestDescByKey = function(key){
+viewGetter.getRequestDescByKey = function(key) {
 	var arrDesc = viewGetter.requestDesc;
-	for(var i = 0, len = arrDesc.length; i < len; i++){
-		if(arrDesc[i]['key'] == key){
+	for (var i = 0, len = arrDesc.length; i < len; i++) {
+		if (arrDesc[i]['key'] == key) {
 			return arrDesc[i];
 		}
 	}
 	return null;
-}
+};
 
 /* 将容器添加进请求描述中
-*/
-viewGetter.appendContainerIntoRequestDesc = function(desc, container){
-	if(!desc){
+ */
+viewGetter.appendContainerIntoRequestDesc = function(desc, container) {
+	if (!desc) {
 		return false;
 	}
 
 	desc.containers = desc.containers || [];
 	desc.containers.push(container);
 	return true;
-}
+};
 
 /* 	发送请求，并用响应结果填充请求描述对应的容器	
 	若请求描述中已缓存响应内容，则直接填充
  */
-viewGetter.sendRequestAndFillContainer = function () {
+viewGetter.sendRequestAndFillContainer = function() {
 	var arrDesc = viewGetter.requestDesc;
-
 	for (var i = 0, len = arrDesc.length; i < len; i++) {
-		var currentUrl = arrDesc[i].url; 				// 相对路径
-		var currentParams = arrDesc[i].params || {}; 	// 请求参数 
-		var containers = arrDesc[i].containers; 		// 容器
+		var currentUrl = arrDesc[i].url; // 相对路径
+		var currentParams = arrDesc[i].params || {}; // 请求参数 
+		var containers = arrDesc[i].containers; // 容器
 		var currentContent = arrDesc[i].content;
 
-		if(typeof responseContext === 'undefined'){
+		if (typeof responseContext === 'undefined') {
 			currentParams["temp"] = Math.random();
 
 			$.ajax({
 				"url": currentUrl,
 				"data": currentParams,
-				"success": (function(objs) {
+				"success": (function(requestDesc) {
 					return function(data) {
 						var responseText = data.replace(/[\n\t\r]/g, '');
 						var responseContext = viewGetter.getResponseContext(responseText);
-						$(objs).each(function() {
+						$(requestDesc.containers).each(function() {
 							$(this).html(responseContext);
 						});
-						arrDesc[i].content = responseContext;
+						requestDesc.content = responseContext;
 					}
-				})(containers),
+				})(arrDesc[i]),
 				"dataType": "html",
-				"type": 'POST'
+				"type": 'GET'
 			});
-		}
-		else{
+		} else {
 			$(containers).each(function() {
 				$(this).html(currentContent);
 			});
 		}
 	}
-}
+};
 
 // 获取响应的内容
 viewGetter.getResponseContext = function(text) {
-	var responseContext = text,
-		htmlTagReg = /^<html>.*<\/html>/im;
+	var responseContext = text;
 
-	/* 	branch 1: html标签， 创建html标签，去除其中的style、script标签。返回body的innerHTML
-		branch 2：非html标签， 直接返回文本 
-	 */
-	if (htmlTagReg.test(responseContext)) {
-		var htmlObj = viewGetter.createHtmlObj(responseContext);
-		responseContext = $(htmlObj).find('body').html();
-	}
+	/* 	创建html标签，去除其中的style、script标签。返回body的innerHTML */
+	var htmlObj = viewGetter.createHtmlObj(responseContext);
+	responseContext = $(htmlObj).find('body').html();
 	return responseContext;
-}
+};
 
 // 创建html对象
 viewGetter.createHtmlObj = function(outerHtml) {
@@ -204,16 +206,95 @@ viewGetter.createHtmlObj = function(outerHtml) {
 		var html = document.createElement('html');
 		var $html = $(html);
 		// 去除html标签
-		var clearTagHtml = outerHtml.replace(/^<html>|<\/html>$/im, '');
+		var clearTagHtml = outerHtml.replace(/^<html>|<\/html>$/gim, '');
 		// 去除style标签
-		clearTagHtml = clearTagHtml.replace(/<style.*<\/style>/gim, '');
+		clearTagHtml = viewGetter.appendStyle(clearTagHtml);
 		// 去除script标签
-		clearTagHtml = clearTagHtml.replace(/<script.*<\/script>/gim, '');
+		clearTagHtml = viewGetter.appendScript(clearTagHtml);
 
 		$html.html(clearTagHtml);
 		return html;
 	} catch (ex) {
+		console.error(ex.stack);
 		return null;
 	}
+};
+
+viewGetter.appendStyle = function(outerHtml) {
+	var styles = outerHtml.match(/(<style.*?<\/style>)/gim),
+		links = outerHtml.match(/(<link.*?type="text\/css".*?<\/link>)/gim),
+		clearTagHtml = outerHtml,
+		styleTag, linkTag,
+		headTag = $('head');
+
+	if (styles) {
+		for (var i = 0, len = styles.length; i < len; i++) {
+			styleTag = createStyleTag(styles[i]);
+			headTag.append(styleTag);
+
+			outerHtml = outerHtml.replace(styles[i], '');
+		}
+	}
+
+	if (links) {
+		for (var i = 0, len = links.length; i < len; i++) {
+			linkTag = createLinkTag(links[i]);
+			headTag.append(linkTag);
+
+			outerHtml = outerHtml.replace(links[i], '');
+		}
+	}
+	return outerHtml;
+};
+
+viewGetter.appendScript = function(outerHtml) {
+	var scripts = outerHtml.match(/(<script.*?<\/script>)/gim),
+		clearTagHtml = outerHtml,
+		scriptTag,
+		bodyTag = $('body');
+
+	if (scripts) {
+		for (var i = 0, len = scripts.length; i < len; i++) {
+			scriptTag = createScriptTag(scripts[i]);
+			bodyTag.append(scriptTag);
+
+			outerHtml = outerHtml.replace(scripts[i], '');
+		}
+	}
+	return outerHtml;
+};
+
+function createStyleTag(styleText) {
+	var styleContent = styleText.replace(/^<style.*?>|<\/style>$/gim, ''),
+		styleTag = document.createElement('style');
+
+	styleTag.type = 'text/css';
+	styleTag.innerHTML = styleContent;
+	return styleTag;
 }
- 
+
+function createLinkTag(linkText) {
+	var linkContent = linkText.replace(/^<link.*?>|<\/link>$/gim, ''),
+		linkTag = document.createElement('link'),
+		href = linkText.match(/href="(.*?)"/);
+
+	link.rel = "stylesheet";
+	linkTag.type = 'text/css';
+	linkTag.href = RegExp.$1;
+	return linkTag;
+}
+
+function createScriptTag(scriptText) {
+	var scriptContent = scriptText.replace(/^<script.*?>|<\/script>$/gim, ''),
+		scriptTag = document.createElement('script'),
+		src = scriptText.match(/src="(.*?)"/);
+
+	scriptTag.type = 'text/css';
+	if (src) {
+		scriptTag.src = src;
+	} else {
+		scriptTag.innerHTML = scriptContent;
+		eval(scriptContent);
+	}
+	return scriptTag;
+}
