@@ -116,7 +116,7 @@ viewGetter.getRequestParams = function(requestObj) {
 		var attr = attrs[i],
 			attrName = '';
 
-		if (attr.nodeName.indexOf('vg-p-') == 0) {
+		if (attr.nodeName.indexOf('vg-p-') === 0) {
 			attrName = attr.nodeName.substr(5);
 			params[attrName] = attr.nodeValue;
 		}
@@ -152,7 +152,8 @@ viewGetter.appendContainerIntoRequestDesc = function(desc, container) {
 	return true;
 };
 
-/* 	发送请求，并用响应结果填充请求描述对应的容器	
+/* 	
+	发送请求，并用响应结果填充请求描述对应的容器	
 	若请求描述中已缓存响应内容，则直接填充
  */
 viewGetter.sendRequestAndFillContainer = function() {
@@ -278,7 +279,7 @@ function createLinkTag(linkText) {
 		linkTag = document.createElement('link'),
 		href = linkText.match(/href="(.*?)"/);
 
-	link.rel = "stylesheet";
+	linkTag.rel = "stylesheet";
 	linkTag.type = 'text/css';
 	linkTag.href = RegExp.$1;
 	return linkTag;
